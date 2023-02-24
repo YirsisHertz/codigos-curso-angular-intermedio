@@ -1,0 +1,12 @@
+<div class="grid mt-3">
+  <div *ngFor="let project of projects" class="col-12 md:col-6 lg:col-4">
+    <a [href]="project.html_url" target="_blank" rel="noopener noreferrer">
+      <p-card [header]="project.full_name" [subheader]="project.created_at">
+        {{ project.description }}
+        <ng-template pTemplate="footer">
+          Author: {{ project.owner.login }}
+        </ng-template>
+      </p-card>
+    </a>
+  </div>
+</div>

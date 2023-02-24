@@ -1,0 +1,297 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-96554b4199a3c98c4f7560a9eb8585476e0e1deef6d10a5311782799662be8b1bc0568894c8747b07e298bdb218a09048fef653f74d35012db533031c1a95f72",
+            "file": "libs/shared/ui/src/lib/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ainter-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "customColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCustom Color\n",
+                    "description": "<p>Custom Color</p>\n",
+                    "line": 31,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "customForeground",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCustom Foreground Text\n",
+                    "description": "<p>Custom Foreground Text</p>\n",
+                    "line": 37,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "isPrimary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine si el color es primario (yellow)\n",
+                    "description": "<p>Define si el color es primario (yellow)</p>\n",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "isRounded",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine si el boton esta redondeado (1 rem)\n",
+                    "description": "<p>Define si el boton esta redondeado (1 rem)</p>\n",
+                    "line": 19,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "text",
+                    "defaultValue": "'Default text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nDefine un texto personalizado\n",
+                    "description": "<p>Define un texto personalizado</p>\n",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'ainter-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * Define si el color es primario (yellow)\n   */\n  @Input()\n  isPrimary: boolean = false;\n\n  /**\n   * Define si el boton esta redondeado (1 rem)\n   */\n  @Input()\n  isRounded: boolean = false;\n\n  /**\n   * Define un texto personalizado\n   */\n  @Input()\n  text: string = 'Default text';\n\n  /**\n   * Custom Color\n   */\n  @Input()\n  customColor?: string;\n\n  /**\n   * Custom Foreground Text\n   */\n  @Input()\n  customForeground?: string;\n\n  get roundedClass() {\n    return this.isRounded ? 'rounded' : '';\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "button {\r\n  border: none;\r\n  padding: 1rem;\r\n  font-size: 1.3rem;\r\n  background-color: tomato;\r\n  color: snow;\r\n  font-weight: bold;\r\n\r\n  &:hover {\r\n    cursor: pointer;\r\n  }\r\n\r\n  &.rounded {\r\n    border-radius: 1rem;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "roundedClass": {
+                    "name": "roundedClass",
+                    "getSignature": {
+                        "name": "roundedClass",
+                        "type": "",
+                        "returnType": "",
+                        "line": 39
+                    }
+                }
+            },
+            "templateData": "<button\n  [ngClass]=\"roundedClass\"\n  [style]=\"'backgroundColor:' + customColor + ';color:' + customForeground\"\n  *ngIf=\"isPrimary\"\n  primary\n>\n  {{ text }}\n</button>\n<button\n  [ngClass]=\"roundedClass\"\n  [style]=\"'backgroundColor:' + customColor + ';color:' + customForeground\"\n  *ngIf=\"!isPrimary\"\n>\n  {{ text }}\n</button>\n"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "CustomText",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Rounded",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args: any) => ({\r\n  props: args,\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "libs/shared/ui/src/lib/button/button.stories.ts": [
+                {
+                    "name": "CustomText",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Rounded",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "libs/shared/ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args: any) => ({\r\n  props: args,\r\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 13,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "libs/shared/ui/src/lib/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CustomText",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Rounded",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "libs/shared/ui/src/lib/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

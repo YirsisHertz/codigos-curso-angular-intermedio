@@ -1,0 +1,66 @@
+<div class="mt-3">
+  <p-card>
+    <p-accordion>
+      <p-accordionTab header="Frontend" [selected]="true">
+        <div class="grid formgrid text-center">
+          <div
+            *ngFor="let frontend of skills.frontend"
+            class="field col-12 md:col-6 lg:col-4"
+          >
+            <h5>{{ frontend.name }}</h5>
+            <p-knob
+              [ngModel]="frontend.level"
+              [valueColor]="frontend.color"
+              [readonly]="true"
+            ></p-knob>
+          </div>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab header="Frameworks CSS">
+        <div class="grid formgrid text-center">
+          <div
+            *ngFor="let cssFrameworks of skills.cssFrameworks"
+            class="field col-12 md:col-6 lg:col-4"
+          >
+            <h5>{{ cssFrameworks.name }}</h5>
+            <p-knob
+              [ngModel]="cssFrameworks.level"
+              [valueColor]="cssFrameworks.color"
+              [readonly]="true"
+            ></p-knob>
+          </div>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab header="Backend">
+        <div class="grid formgrid text-center">
+          <div
+            *ngFor="let backend of skills.backend"
+            class="field col-12 md:col-6 lg:col-4"
+          >
+            <h5>{{ backend.name }}</h5>
+            <p-knob
+              [ngModel]="backend.level"
+              [valueColor]="backend.color"
+              [readonly]="true"
+            ></p-knob>
+          </div>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab header="Databases">
+        <div class="grid formgrid text-center">
+          <div
+            *ngFor="let databases of skills.databases"
+            class="field col-12 md:col-6 lg:col-4"
+          >
+            <h5>{{ databases.name }}</h5>
+            <p-knob
+              [ngModel]="databases.level"
+              [valueColor]="databases.color"
+              [readonly]="true"
+            ></p-knob>
+          </div>
+        </div>
+      </p-accordionTab>
+    </p-accordion>
+  </p-card>
+</div>

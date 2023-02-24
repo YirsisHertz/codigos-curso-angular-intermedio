@@ -1,0 +1,10 @@
+<div class="row">
+  <app-loading *ngIf="pokemons.length == 0"></app-loading>
+
+  <div class="col-12 col-md-4" *ngFor="let pokemon of pokemons; index as index">
+    <app-pokemon-card-smart
+      [pokemon]="pokemon"
+      [index]="index + 1"
+    ></app-pokemon-card-smart>
+  </div>
+</div>

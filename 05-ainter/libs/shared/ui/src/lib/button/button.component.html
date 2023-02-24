@@ -1,0 +1,15 @@
+<button
+  [ngClass]="roundedClass"
+  [style]="'backgroundColor:' + customColor + ';color:' + customForeground"
+  *ngIf="isPrimary"
+  primary
+>
+  {{ text }}
+</button>
+<button
+  [ngClass]="roundedClass"
+  [style]="'backgroundColor:' + customColor + ';color:' + customForeground"
+  *ngIf="!isPrimary"
+>
+  {{ text }}
+</button>

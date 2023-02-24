@@ -1,0 +1,15 @@
+{
+  "name": "04-jsdocs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc sum.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsdoc": "^4.0.0"
+  }
+}
