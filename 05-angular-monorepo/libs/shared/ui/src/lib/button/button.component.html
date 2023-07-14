@@ -1,0 +1,16 @@
+<button
+  [ngClass]="roundedClass"
+  [style]="'backgroundColor:' + bgColor + '; color:' + textColor + ';'"
+  *ngIf="isPrimary"
+  primary
+>
+  {{ text }}
+</button>
+
+<button
+  [ngClass]="roundedClass"
+  [style]="'backgroundColor:' + bgColor + '; color:' + textColor + ';'"
+  *ngIf="!isPrimary"
+>
+  {{ text }}
+</button>
